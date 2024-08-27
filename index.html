@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +11,55 @@
         body {
             padding-top: 56px;
         }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
         .portfolio-item {
             margin-bottom: 30px;
         }
-        .bg-image{
+
+        .bg-image {
             background-image: url('/public/bg.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            padding: 150px;            
-            
+            /* opacity: 0.9; */
+
+        }
+
+        .project:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        #Work {
+            background-color: #f8f9fa;
+        }
+
+        .text {
+            color: #00129d;
+        }
+
+        @media screen and (max-width: 768px) {
+            .text {
+                color: #ffffff;
+            }
+        }
+
+        .name {
+            font-size: xx-large;
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,7 +68,7 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#Work">Work</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -46,39 +78,54 @@
     </nav>
 
     <!-- About Section -->
-    <section id="about" class="d-flex bg-image text-center justify-content-center align-items-center">
-        <h2 class="mx-5 text-primary-emphasis">About Me</h2>
-        <p class="ml-5 text-primary-emphasis">I am the person who codes on Vim :)</p>
+    <section id="about"
+        class="d-md-inline-flex bg-image text-center justify-content-center align-items-center w-100 py-5 vh-100">
+        <div class="container">
+            <h2 class="px-5 text-primary-emphasis fw-bolder fs-2 name">Hello I am <span class="text">Pranav
+                    Titambe</span></h2>
+            <p class="text-primary-emphasis ">I am the person who codes on Vim :)</p>
+        </div>
+        <div class="container">
+            <div class="d-md-inline-flex">
+                <img src="public/me.jpg" class="img-fluid rounded-circle mb-3 " alt="pranav-profile"
+                    style="height: 250px; width: 250px;">
+            </div>
+        </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="container my-5">
-        <h2 class="text-center my-5">My Work</h2>
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <div class="card">
-                    <img src="public/employee.jpg" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Employee Management System</h5>
-                        <p class="card-text">An automated system to track the working progress of the employees in corporate companies.</p>
+    <section id="Work" class="py-5 vh-md-100 bg-light-substle px-5">
+        <div class="container">
+            <h2 class="text-center my-5">My Work</h2>
+            <div class="row">
+                <div class="col-md-4 portfolio-item project">
+                    <div class="card">
+                        <img src="public/employee.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Employee Management System</h5>
+                            <p class="card-text">An automated system to track the working progress of the employees in
+                                corporate companies.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <div class="card">
-                    <img src="public/appointment.jpg" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointment Management System</h5>
-                        <p class="card-text">An automated system to track the numbers of appointment in the chain of salons.</p>
+                <div class="col-md-4 portfolio-item project">
+                    <div class="card">
+                        <img src="public/appointment.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Appointment Management System</h5>
+                            <p class="card-text">An automated system to track the numbers of appointment in the chain of
+                                salons.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <div class="card">
-                    <img src="public/spring-boot.jpg" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Spring Boot backend</h5>
-                        <p class="card-text">A sample project to learn a robust framework.</p>
+                <div class="col-md-4 portfolio-item project">
+                    <div class="card">
+                        <img src="public/project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Spring Boot backend</h5>
+                            <p class="card-text">A sample project to learn a robust and strong framework used in most of
+                                the Big-Tech companies.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,4 +162,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
